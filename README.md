@@ -9,7 +9,7 @@ Create a modal window with a form with field validation according to the terms o
 ![JavaScript](https://img.shields.io/badge/-JavaScript-4d4d4d?style=for-the-badge&logo=JavaScript&logoColor=f7dc1c)
 
 ### Demo
-<img src="https://github.com/ilya-filatov-94/TaskForInterview5/blob/main/Demo/LoginForm.gif" alt="drawing" width="1000"/>
+<img src="https://github.com/ilya-filatov-94/TaskForInterview5/blob/main/Demo/LoginForm.gif" alt="drawing" width="830"/>
 
 ### Running the finished code
 The project is made in version React 18.2.0.
