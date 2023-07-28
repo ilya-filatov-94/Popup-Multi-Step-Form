@@ -1,0 +1,26 @@
+@import "./roboto_font.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+#root {
+  background-color: #F4F4F4;
+}
+
+.App {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: normal;
+}
+

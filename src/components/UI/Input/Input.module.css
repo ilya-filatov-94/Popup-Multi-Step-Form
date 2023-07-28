@@ -1,0 +1,17 @@
+.input {
+    width: 100%;
+    padding: 10px 1rem;
+    font-size: 0.875rem;
+    font-weight: normal;
+    outline: 2px solid #DDDDDD;
+}
+
+.error {
+    outline: 2px solid #9F2B11;
+}
+
+.input:focus:not(.error) {
+    outline: 2px solid #82B3D9;
+}
+
+

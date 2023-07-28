@@ -1,0 +1,50 @@
+.agreement {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkbox {
+    background-image: url(../../../assets/img/checkBox_default.svg);
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.checkbox:hover {
+    background-image: url(../../../assets/img/checkBox_hover.svg);
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+}
+
+.checkboxChecked {
+    background-image: url(../../../assets/img/checkBox_checked.svg);
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.text {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.link {
+    color: #558CB7;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link:visited {
+    text-decoration: underline;
+}

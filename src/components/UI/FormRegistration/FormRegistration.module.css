@@ -1,0 +1,41 @@
+.formRegistration {
+    margin: 0;
+    position: relative;
+}
+
+.header {
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: black;
+}
+
+.btnClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../../../assets/img/closeBtn_default.svg);
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btnClose:hover,
+.btnClose:active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../../../assets/img/closeBtn_focus.svg);
+}
+
+.loginBtn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

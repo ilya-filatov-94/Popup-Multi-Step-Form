@@ -1,0 +1,23 @@
+.InputField {
+    height: 85px;
+}
+
+.wrapperHeader {
+    margin-bottom: 7.5px;
+}
+
+.header {
+    font-size: 0.875rem;
+    color: black;
+    font-weight: bold;
+}
+
+.wrapperError {
+    margin-top: 7.5px;
+}
+
+.error {
+    font-size: 0.75rem;
+    color: #9F2B11;
+    font-weight: normal;
+}
