@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 
 
-export const useValidationPassword = (inputValue, clearInput, validations) => {
+export const useValidationPassword = (inputValue, modalIsOpened, validations) => {
     const [stateChecklist1, setStateChecklist1] = useState('default');
     const [stateChecklist2, setStateChecklist2] = useState('default');
     const [stateChecklist3, setStateChecklist3] = useState('default');
@@ -58,10 +58,10 @@ export const useValidationPassword = (inputValue, clearInput, validations) => {
         }
 
         //Очистка состояний после закрытия модального окна
-        if (clearInput) {
+        if (modalIsOpened) {
             openWindow(true);
         }
-        if (stateWindow && !clearInput) {
+        if (stateWindow && !modalIsOpened) {
             setStateChecklist1('default');
             setStateChecklist2('default');
             setStateChecklist3('default');

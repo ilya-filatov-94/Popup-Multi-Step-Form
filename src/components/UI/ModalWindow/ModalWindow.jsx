@@ -2,7 +2,7 @@ import React from "react";
 import styles from './ModalWindow.module.css'
 
 
-function ModalWindow({children, visible, setVisible}) {
+function ModalWindow({children, visible}) {
 
     const rootClasses = [styles.modalWindow];
     if (visible) {
@@ -10,8 +10,8 @@ function ModalWindow({children, visible, setVisible}) {
     }
 
     return (
-        <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
-            <div className={styles.contentWindow} onClick={event => (event.stopPropagation())}>
+        <div className={rootClasses.join(' ')}>
+            <div className={styles.contentWindow}>
                 {children}
             </div>
         </div>

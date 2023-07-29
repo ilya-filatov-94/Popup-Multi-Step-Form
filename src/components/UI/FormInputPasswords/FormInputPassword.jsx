@@ -5,11 +5,11 @@ import { useValidationPassword } from "../../hooks/useValidationPassword.js";
 
 
 
-function FormInputPassword({clearInput, statePassword, setPassword, setRepeatPas}) {
+function FormInputPassword({modalIsOpened, statePassword, setPassword, setRepeatPas}) {
 
     //Состояния ввода пароля
     const [stateInputPas, setValuePas] = useState('');
-    const password = useValidationPassword(stateInputPas, clearInput, {
+    const password = useValidationPassword(stateInputPas, modalIsOpened, {
         minLength: 6,
         maxLength: 32,
         hasDigit: true,
@@ -57,7 +57,7 @@ function FormInputPassword({clearInput, statePassword, setPassword, setRepeatPas
 
     //Очистка инпутов и состояний
     useEffect(() => {
-        if (!clearInput) {
+        if (!modalIsOpened) {
             setPassword({isValid: false, value: '', errorMessage: ''});
             setValueRepeatPas({value: '', error: false, errorMessage: ''});
             setRepeatPas({isValid: false, value: '', errorMessage: ''});
@@ -66,7 +66,7 @@ function FormInputPassword({clearInput, statePassword, setPassword, setRepeatPas
             setValuePas('');
         }
         // eslint-disable-next-line
-    }, [clearInput]);
+    }, [modalIsOpened]);
 
     const errorPassword = password.stateChecklist1 === 'error' ||
         password.stateChecklist2 === 'error' ||

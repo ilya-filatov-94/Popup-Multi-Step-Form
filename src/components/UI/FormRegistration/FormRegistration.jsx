@@ -8,7 +8,7 @@ import Button from '../Button/Button';
 
 
 
-function FormRegistration({visible, setVisible, login}) {
+function FormRegistration({modalIsOpened, setVisibleWindow, login}) {
 
     const [stateEmail, setEmail] = useState({isValid: false, value: '', errorMessage: ''});
     const [stateNickname, setNickname] = useState({isValid: false, value: '', errorMessage: ''});
@@ -83,7 +83,7 @@ function FormRegistration({visible, setVisible, login}) {
         };
         console.log(JSON.stringify(userData));
         login(true);
-        setVisible(false);
+        setVisibleWindow(false);
     }
 
     return (
@@ -91,26 +91,26 @@ function FormRegistration({visible, setVisible, login}) {
             <div className={styles.header}>
                 <h1>Регистрация</h1>
                 <div
-                    onClick={() => setVisible(false)}
+                    onClick={() => setVisibleWindow(false)}
                     className={styles.btnClose}
                     alt="Close button"
                 />
             </div>
 
             <InputEmail
-                clearInput={visible}
+                modalIsOpened={modalIsOpened}
                 state={stateEmail}
                 setState={setEmail}>
             </InputEmail>
 
             <InputNickname
-                clearInput={visible}
+                modalIsOpened={modalIsOpened}
                 state={stateNickname}
                 setState={setNickname}>
             </InputNickname>
 
             <FormInputPassword
-                clearInput={visible}
+                modalIsOpened={modalIsOpened}
                 statePassword={statePassword}
                 setPassword={setPassword}
                 setRepeatPas={setRepeatPas}
@@ -118,7 +118,7 @@ function FormRegistration({visible, setVisible, login}) {
             </FormInputPassword>
 
             <UserAgreement
-                clearInput={visible}
+                modalIsOpened={modalIsOpened}
                 stateCheckbox={stateCheckbox}
                 setStateCheckbox={setStateCheckbox}
             >

@@ -3,7 +3,7 @@ import { useValidation } from '../../hooks/useValidation'
 import InputField from "../InputField/InputField";
 
 
-function InputNickname({clearInput, state, setState}) {
+function InputNickname({modalIsOpened, state, setState}) {
 
     const [value, setValue] = useState('');
     const { isValid, errorMessage } = useValidation(value,
@@ -30,12 +30,12 @@ function InputNickname({clearInput, state, setState}) {
     }
 
     useEffect(() => {
-        if (!clearInput) {
+        if (!modalIsOpened) {
             setValue('');
             setState({isValid: false, value: '', errorMessage: ''});
         }
     // eslint-disable-next-line
-    }, [clearInput]);
+    }, [modalIsOpened]);
 
     return (
         <InputField

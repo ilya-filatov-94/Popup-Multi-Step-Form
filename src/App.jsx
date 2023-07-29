@@ -9,16 +9,16 @@ import Button from './components/UI/Button/Button';
 
 function App() {
 
-  const [modalIsVisible, openModalWindow] = useState(false);
+  const [modalIsOpened, openModalWindow] = useState(false);
   const [isLogin, login] = useState(false);
 
 
   return (
     <div className="App">
-      <ModalWindow visible={modalIsVisible} setVisible={openModalWindow}>
+      <ModalWindow visible={modalIsOpened}>
         <FormRegistration 
-        visible={modalIsVisible}
-        setVisible={openModalWindow}
+        modalIsOpened={modalIsOpened}
+        setVisibleWindow={openModalWindow}
         login={login}
         />
       </ModalWindow>
