@@ -15,7 +15,7 @@ function FormRegistration({modalIsOpened, setVisibleWindow, login}) {
     const [statePassword, setPassword] = useState({isValid: false, checklist: false, value: '', errorMessage: ''});
     const [stateRepeatPas, setRepeatPas] = useState({isValid: false, value: '', errorMessage: ''});
     const [stateCheckbox, setStateCheckbox] = useState(false);
-    const [stateSendButton, setLockedSendButton] = useState(false);
+    const [stateSendButton, setUnlockedSendButton] = useState(false);
 
     useEffect(() => {
         const hasNotDuplicates = checkUniquePassw(stateNickname.value, stateEmail.value);
@@ -63,9 +63,9 @@ function FormRegistration({modalIsOpened, setVisibleWindow, login}) {
             stateRepeatPas.isValid &&
             stateCheckbox;
         if (validForm) {
-            setLockedSendButton(true);
+            setUnlockedSendButton(true);
         } else {
-            setLockedSendButton(false);
+            setUnlockedSendButton(false);
         }
     }, [stateEmail.isValid,
         stateNickname.isValid,
