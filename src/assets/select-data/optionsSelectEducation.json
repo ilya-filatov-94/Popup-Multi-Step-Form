@@ -1,0 +1,7 @@
+[
+    { "value": "middle", "name": "Среднее" },
+    { "value": "specialist", "name": "Среднее специальное" },
+    { "value": "higherSpecialist", "name": "Высшее - специалитет" },
+    { "value": "higherBachelor", "name": "Высшее - бакалавриат" },
+    { "value": "higherMaster", "name": "Высшее - магистратура" }
+]

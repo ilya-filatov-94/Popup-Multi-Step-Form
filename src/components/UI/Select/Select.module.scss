@@ -1,0 +1,85 @@
+$height: 40px;
+// $width: 210px;
+$width: 100%;
+
+
+.backDrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+}
+
+.backDrop__active {
+    display: block;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: $width;
+    position: relative;
+}
+
+.select {
+    width: 100%;
+    margin: 0;
+    padding: 0 0.575rem 0 1rem;
+    border: 2px solid #DDDDDD;
+    font-size: 0.875rem;
+    font-weight: normal;
+    background-color: white;
+    cursor: pointer;
+
+    &.__input {
+        height: $height;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.__dropdown {
+        display: none;
+        padding: 0;
+        position: absolute;
+        top: $height;
+        left: 0;
+        right: 0;
+        max-height: 178px;
+        overflow-y: auto;
+        box-shadow: 2px 3px 5px rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &.dropdown__open {
+        display: block;
+    }
+
+    &.input__open {
+        border-bottom: none;
+    }
+}
+
+.select__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item {
+    width: 100%;
+    padding: 0.4rem 0.7rem 0.4rem 1rem;
+}
+
+.item:hover:not(.selected__item) {
+    background-color: #c1bfbf66;
+}
+
+.selected__item {
+    color: white;
+    background-color: #82B3D9;
+}

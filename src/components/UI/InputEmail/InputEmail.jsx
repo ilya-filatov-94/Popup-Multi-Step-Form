@@ -3,7 +3,7 @@ import InputField from '../InputField/InputField'
 import { useValidation } from "../../hooks/useValidation";
 
 
-function InputEmail({modalIsOpened, state, setState}) {
+function InputEmail({IsModalOpen, state, setState}) {
 
     const [value, setValue] = useState('');
     const { isValid, errorMessage } = useValidation(value, {checkEmail: true});
@@ -24,12 +24,12 @@ function InputEmail({modalIsOpened, state, setState}) {
     }
 
     useEffect(() => {
-        if (!modalIsOpened) {
+        if (!IsModalOpen) {
             setValue('');
             setState({isValid: false, value: '', errorMessage: ''});
         }
     // eslint-disable-next-line
-    }, [modalIsOpened]);
+    }, [IsModalOpen]);
     
     return (
         <InputField

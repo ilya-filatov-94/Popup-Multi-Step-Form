@@ -1,9 +1,10 @@
 .agreement {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 
 .checkbox {

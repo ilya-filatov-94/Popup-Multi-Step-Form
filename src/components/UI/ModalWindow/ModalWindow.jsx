@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './ModalWindow.module.css'
+import styles from './ModalWindow.module.scss'
 
 
 function ModalWindow({children, visible}) {

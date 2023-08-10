@@ -1,17 +1,12 @@
-.input {
+.textarea {
     padding: 10px 1rem;
+    font-family: 'Roboto', 'sans-serif';
     font-size: 0.875rem;
     font-weight: normal;
     border: 2px solid #DDDDDD;
     width: 100%;
 }
 
-.error {
-    border: 2px solid #9F2B11;
-}
-
-.input:focus:not(.error) {
+.textarea:focus {
     border: 2px solid #82B3D9;
 }
-
-

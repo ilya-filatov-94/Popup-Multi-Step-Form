@@ -3,31 +3,36 @@ import styles from '../UserAgreement/UserAgreement.module.css';
 
 
 
-function UserAgreement({clearInput, stateCheckbox, setStateCheckbox}) {
+function UserAgreement({IsModalOpen, stateCheckbox, setStateCheckbox}) {
 
     function changeState(newState) {
         setStateCheckbox(newState);
     }
 
     useEffect(() => {
-        if (!clearInput) {
+        if (!IsModalOpen) {
             setStateCheckbox(false);
         }
     // eslint-disable-next-line
-    }, [clearInput]);
+    }, [IsModalOpen]);
 
     return (
-        <div className={styles.agreement}>
+        <div className={styles.agreement}
+            onClick={() => changeState(!stateCheckbox)}
+        >
             <button
                 className={stateCheckbox
                     ? styles.checkboxChecked
                     : styles.checkbox
                 }
-                onClick={()=>changeState(!stateCheckbox)}>
+            >
             </button>
             <div>
                 <span className={styles.text}> Я принимаю условия </span>
-                <a className={`${styles.link} ${styles.text}`} href="#agreement">Пользовательского соглашения</a>
+                <a className={`${styles.link} ${styles.text}`}
+                    href="#agreement" target="_blank">
+                    Пользовательского соглашения
+                </a>
             </div>
         </div>
     );

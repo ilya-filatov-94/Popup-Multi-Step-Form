@@ -1,0 +1,64 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.radioBtnList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.elemList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.wrapperButton {
+    padding: 0;
+    margin-top: 2px;
+    width: 19.2px;
+    height: 19.2px;
+}
+
+.radioBtn {
+    background-image: url(../../../assets/img/radioButton_default.svg);
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.radioBtn:hover {
+    background-image: url(../../../assets/img/radioButton_hover.svg);
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+}
+
+.radioBtnChecked {
+    background-image: url(../../../assets/img/radioButton_checked.svg);
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.wrapperText {
+    margin-right: 5px;
+}
+
+.text {
+    font-size: 0.875rem;
+    font-weight: normal;
+}

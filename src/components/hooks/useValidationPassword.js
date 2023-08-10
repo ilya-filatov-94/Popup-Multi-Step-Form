@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 
 
-export const useValidationPassword = (inputValue, modalIsOpened, validations) => {
+export const useValidationPassword = (inputValue, IsModalOpen, validations) => {
     const [stateChecklist1, setStateChecklist1] = useState('default');
     const [stateChecklist2, setStateChecklist2] = useState('default');
     const [stateChecklist3, setStateChecklist3] = useState('default');
@@ -44,8 +44,8 @@ export const useValidationPassword = (inputValue, modalIsOpened, validations) =>
                     break;
 
                 case 'lettersDfferentRegisters':
-                    const hasLettersBigRegister = /[A-ZА-Я]/g.test(inputValue);
-                    const hasLettersSmallRegister = /[a-zа-я]/g.test(inputValue);
+                    const hasLettersBigRegister = /[A-ZА-ЯЁ]/g.test(inputValue);
+                    const hasLettersSmallRegister = /[a-zа-яё]/g.test(inputValue);
                     if ((!hasLettersBigRegister || !hasLettersSmallRegister) && stateChecklist3 === 'ok') {
                         setStateChecklist3('error');
                         setErrorMessage('В пароле нет букв разного регистра');
@@ -58,10 +58,10 @@ export const useValidationPassword = (inputValue, modalIsOpened, validations) =>
         }
 
         //Очистка состояний после закрытия модального окна
-        if (modalIsOpened) {
+        if (IsModalOpen) {
             openWindow(true);
         }
-        if (stateWindow && !modalIsOpened) {
+        if (stateWindow && !IsModalOpen) {
             setStateChecklist1('default');
             setStateChecklist2('default');
             setStateChecklist3('default');

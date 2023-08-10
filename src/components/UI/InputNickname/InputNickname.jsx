@@ -3,7 +3,7 @@ import { useValidation } from '../../hooks/useValidation'
 import InputField from "../InputField/InputField";
 
 
-function InputNickname({modalIsOpened, state, setState}) {
+function InputNickname({IsModalOpen, state, setState}) {
 
     const [value, setValue] = useState('');
     const { isValid, errorMessage } = useValidation(value,
@@ -30,12 +30,12 @@ function InputNickname({modalIsOpened, state, setState}) {
     }
 
     useEffect(() => {
-        if (!modalIsOpened) {
+        if (!IsModalOpen) {
             setValue('');
             setState({isValid: false, value: '', errorMessage: ''});
         }
     // eslint-disable-next-line
-    }, [modalIsOpened]);
+    }, [IsModalOpen]);
 
     return (
         <InputField

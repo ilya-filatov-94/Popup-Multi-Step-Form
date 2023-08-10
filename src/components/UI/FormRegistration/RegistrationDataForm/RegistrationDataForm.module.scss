@@ -1,0 +1,25 @@
+@import '../../ModalWindow/sizeWindow.scss';
+@import '../sizesForm.scss';
+
+.wrapperForRegistrationFields {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: $heightModalWindow - calc(2 * ($paddingWindow + $headerHeight));
+}
+
+.wrapperForRegistrationFields:last-child{
+    align-self: flex-end;
+}
+
+.inputs {
+    width: 100%;
+}
+
+.loginBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

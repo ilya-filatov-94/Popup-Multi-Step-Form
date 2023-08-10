@@ -5,11 +5,11 @@ import { useValidationPassword } from "../../hooks/useValidationPassword.js";
 
 
 
-function FormInputPassword({modalIsOpened, statePassword, setPassword, setRepeatPas}) {
+function FormInputPassword({IsModalOpen, statePassword, setPassword, setRepeatPas}) {
 
     //Состояния ввода пароля
     const [stateInputPas, setValuePas] = useState('');
-    const password = useValidationPassword(stateInputPas, modalIsOpened, {
+    const password = useValidationPassword(stateInputPas, IsModalOpen, {
         minLength: 6,
         maxLength: 32,
         hasDigit: true,
@@ -57,7 +57,7 @@ function FormInputPassword({modalIsOpened, statePassword, setPassword, setRepeat
 
     //Очистка инпутов и состояний
     useEffect(() => {
-        if (!modalIsOpened) {
+        if (!IsModalOpen) {
             setPassword({isValid: false, value: '', errorMessage: ''});
             setValueRepeatPas({value: '', error: false, errorMessage: ''});
             setRepeatPas({isValid: false, value: '', errorMessage: ''});
@@ -66,7 +66,7 @@ function FormInputPassword({modalIsOpened, statePassword, setPassword, setRepeat
             setValuePas('');
         }
         // eslint-disable-next-line
-    }, [modalIsOpened]);
+    }, [IsModalOpen]);
 
     const errorPassword = password.stateChecklist1 === 'error' ||
         password.stateChecklist2 === 'error' ||
@@ -93,7 +93,7 @@ function FormInputPassword({modalIsOpened, statePassword, setPassword, setRepeat
                 value={stateInputRepeatPas.value}
                 error={stateInputRepeatPas.error}
                 errorMessage={stateInputRepeatPas.errorMessage}
-                style={{ marginTop: 7.5 }}
+                style={{ marginTop: 5 }}
                 onChange={(event) => checkRepeatPas(event.target.value)}
                 onBlur={(event) => hasErrorRepeatPas(event.target.value)}
             >

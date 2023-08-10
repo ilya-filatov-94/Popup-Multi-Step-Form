@@ -1,11 +1,17 @@
+@import '../ModalWindow/sizeWindow.scss';
+@import './sizesForm.scss';
+
 .formRegistration {
     margin: 0;
+    padding: $paddingWindow;
+    box-sizing: border-box;
     position: relative;
+    min-height: $heightModalWindow;
 }
 
 .header {
-    height: 30px;
-    margin-bottom: 30px;
+    min-height: $headerHeight;
+    margin-bottom: $headerHeight;
 }
 
 h1 {
@@ -16,11 +22,11 @@ h1 {
 
 .btnClose {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: $positionBtnClose;
+    right: $positionBtnClose;
     background-image: url(../../../assets/img/closeBtn_default.svg);
-    width: 32px;
-    height: 32px;
+    width: $positionBtnClose;
+    height: $positionBtnClose;
     background-size: contain;
     cursor: pointer;
 }
@@ -28,14 +34,9 @@ h1 {
 .btnClose:hover,
 .btnClose:active {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: $positionBtnClose;
+    right: $positionBtnClose;
     background-image: url(../../../assets/img/closeBtn_focus.svg);
 }
 
-.loginBtn {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+

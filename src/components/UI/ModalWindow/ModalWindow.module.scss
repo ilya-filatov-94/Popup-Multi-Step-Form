@@ -1,3 +1,5 @@
+@import './sizeWindow.scss';
+
 .modalWindow {
     position: fixed;
     top: 0;
@@ -9,10 +11,9 @@
 }
 
 .contentWindow {
-    padding: 40px;
     background: white;
-    min-width: 480px;
-    min-height: 700px;
+    min-width: $widthModalWindow;
+    min-height: $heightModalWindow;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
