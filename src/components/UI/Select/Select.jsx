@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from './Select.module.scss'
-import {BiChevronDown, BiChevronUp} from 'react-icons/bi';
 
 
 
@@ -55,9 +54,14 @@ export default React.memo(
                     <span ref={valueRef}>
                         {stateSelect.selectOption}
                     </span>
-                    {stateSelect.visible
-                        ? <BiChevronUp size={20} />
-                        : <BiChevronDown size={20} />}
+                    <button
+                        type="button"
+                        className={stateSelect.visible
+                            ? styles.arrow_up
+                            : styles.arrow_down
+                        }
+                    >
+                    </button>
                 </div>
                 <div className={stateSelect.visible
                     ? `${styles.select} ${styles.__dropdown} ${styles.dropdown__open}`

@@ -1,5 +1,4 @@
 $height: 40px;
-// $width: 210px;
 $width: 100%;
 
 
@@ -29,7 +28,7 @@ $width: 100%;
 .select {
     width: 100%;
     margin: 0;
-    padding: 0 0.575rem 0 1rem;
+    padding: 0 1rem 0 1rem;
     border: 2px solid #DDDDDD;
     font-size: 0.875rem;
     font-weight: normal;
@@ -62,6 +61,22 @@ $width: 100%;
     &.input__open {
         border-bottom: none;
     }
+}
+
+.arrow_up {
+    background-image: url(../../../assets/img/chevron_arrow_up.svg);
+    width: 13px;
+    height: 13px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.arrow_down {
+    background-image: url(../../../assets/img/chevron_arrow_down.svg);
+    width: 13px;
+    height: 13px;
+    background-size: contain;
+    cursor: pointer;
 }
 
 .select__list {
