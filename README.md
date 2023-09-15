@@ -6,8 +6,8 @@ Create a modal window with a form with field validation according to the terms o
 ![React](https://img.shields.io/badge/-React-4d4d4d?style=for-the-badge&logo=React&logoColor=00d8ff)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-4d4d4d?style=for-the-badge&logo=JavaScript&logoColor=f7dc1c)
 ![SCSS](https://img.shields.io/badge/-SCSS-4d4d4d?style=for-the-badge&logo=Sass&logoColor=be608b)
-![CSS3](https://img.shields.io/static/v1?style=for-the-badge&message=CSS3&color=4d4d4d&logo=CSS3&logoColor=264de4&label=)
 ![CSS Modules](https://img.shields.io/static/v1?style=for-the-badge&message=CSS+Modules&color=4d4d4d&logo=CSS+Modules&logoColor=FFFFFF&label=)
+![CSS3](https://img.shields.io/static/v1?style=for-the-badge&message=CSS3&color=4d4d4d&logo=CSS3&logoColor=264de4&label=)
 ![HTML5](https://img.shields.io/static/v1?style=for-the-badge&message=HTML5&color=4d4d4d&logo=CSS3&logoColor=e44d26&label=)
 
 ### Demo
